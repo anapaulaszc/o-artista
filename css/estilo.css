@@ -1,45 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Poppins&display=swap');
 
 body {
-  font-family: 'Poppins';
+    background-color: #fafafa;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-header, #principal, #second, #contato, #stream {
-	
+header {
+    background-color: #333;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.link-menu {
-  color: #fff;
-  background-color: #555;
+#logo img {
+    width: 120px;
+    height: auto;
 }
 
-.f {
-  background-color: #5b305a;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
-.l {
-  background-color: #e49756;
+.item-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: #555;
 }
 
-.m {
-  background-color: #e04b5a;
+.item-menu a:hover {
+    background-color: #f1ecf7;
+    color: #333;
+}
+
+.link-menu.f,
+.link-menu.l,
+.link-menu.m {
+    background-color: #555;
 }
 
 main {
-  background-color: #333;
-  color: #ddd;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1, h2 {
-  font-family: 'Amatic SC';
+main.f #principal {
+    background-color: #8A2BE2;
 }
 
-#second a{
-  color: #fff;
+main.l #principal {
+    background-color: #FF8C00;
+}
+
+main.m #principal {
+    background-color: #FF6347;
+}
+
+#principal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #444;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#principal figure {
+    flex-shrink: 0;
+}
+
+#principal img {
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#sec_ctd {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+#sec_ctd h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Amatic SC', cursive;
+}
+
+#sec_ctd p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+    text-align: justify;
+}
+
+#sec_ctd p a {
+    color: #ADD8E6;
+    text-decoration: underline;
+}
+
+#second {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px 20px;
+    margin-top: 20px;
+    gap: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cartaz {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    padding: 10px;
+}
+
+.cartaz:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cartaz .capa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+#descricao {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+#descricao h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+#descricao ol, #descricao ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+#descricao ol li, #descricao ul li {
+    margin-bottom: 8px;
+}
+
+#descricao iframe {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#acesso {
+    background-color: #8A2BE2;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#acesso.f {
+    background-color: #8A2BE2;
+}
+
+#acesso.l {
+    background-color: #FF8C00;
+}
+
+#acesso.m {
+    background-color: #FF6347;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#acesso a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#acesso a:hover {
+    color: #eee;
+}
+
+#acesso img {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+#acesso.l a {
+    display: inline-block;
+    background-color: white;
+    color: #FF8C00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#acesso.l a:hover {
+    background-color: #eee;
+    color: #e07b00;
 }
 
 footer {
-  background-color: #333;
-  color: #ddd;
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#contato {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#email a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#social {
+    display: flex;
+    gap: 15px;
+}
+
+#social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#social img:hover {
+    transform: scale(1.2);
+}
+
+#descricao ul, #descricao ol {
+    margin-left: 20px;
+}
